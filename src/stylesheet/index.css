@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+.logo-block {
+  width: 12px;
+  height: 24px;
+  border-radius: 2px;
+  background-color: #188168;
+  flex-shrink: 0;
+  animation: logo-animation 1s linear infinite;
+}
+
+@keyframes logo-animation{
+  50%{
+    opacity: .4;
+    scale: 0.8;
+    translate: (10px, 10px);
+  }
+}
+
