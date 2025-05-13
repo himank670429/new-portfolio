@@ -3,7 +3,9 @@ import {
   useState,
   createContext,
   useEffect,
-  PropsWithChildren,
+  useMemo,
+  useCallback,
+  ReactNode,
 } from "react";
 
 export type ThemeContextType = {
@@ -15,7 +17,7 @@ export const ThemeContext = createContext<ThemeContextType>({
   toggleTheme: () => {},
 });
 
-export default function ThemeProvider({ children }: PropsWithChildren) {
+export default function ThemeProvider({ children }: Readonly<{children: ReactNode}>) {
   const [theme, setTheme] = useState(true);
   // false -> light
   // true -> dark
@@ -27,16 +29,18 @@ export default function ThemeProvider({ children }: PropsWithChildren) {
     }
   }, [theme]);
 
-  function toggleTheme() {
-    setTheme((prev) => !prev);
-  }
+  const toggleTheme = useCallback(() => {
+    setTheme(!theme);
+  }, [theme])
+
+  const providerValues = useMemo(() => ({
+    theme,
+    toggleTheme,
+  }), [theme, toggleTheme])
 
   return (
     <ThemeContext.Provider
-      value={{
-        theme,
-        toggleTheme,
-      }}
+      value={providerValues}
     >
       {children}
     </ThemeContext.Provider>
