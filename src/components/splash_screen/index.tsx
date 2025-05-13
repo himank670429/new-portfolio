@@ -22,7 +22,7 @@ export function SplashScreen(props: Readonly<PropsWithChildren>): JSX.Element {
   }, []);
 
   return (
-    <div className="relative size-full">
+    <div className="relative h-screen">
       {/* Splash Screen with fade-out effect */}
       {isLoading && (
         <div

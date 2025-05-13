@@ -16,6 +16,10 @@
   --color-text-highlight: #188168;
 }
 
+body {
+  background-color: var(--color-background);
+}
+
 .logo-block {
   width: 12px;
   height: 24px;
