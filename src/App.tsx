@@ -1,10 +1,15 @@
 import { Home } from "@/screens";
-import { SplashScreen } from "./components/splash_screen";
+import { SplashScreen, ScreenLayout } from "@/components";
+import ThemeProvider from "./contexts/ThemeContext";
 function App() {
   return (
-    <SplashScreen>
-      <Home />
-    </SplashScreen>
+    <ThemeProvider>
+      <ScreenLayout>
+        <SplashScreen>
+          <Home />
+        </SplashScreen>
+      </ScreenLayout>
+     </ThemeProvider>
   );
 }
 
