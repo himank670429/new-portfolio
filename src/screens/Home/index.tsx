@@ -1,8 +1,10 @@
 import { Header, Info } from "@/components";
 
 export function Home() {
-  return <div>
-    <Header />
-    <Info />
-  </div>;
+  return (
+    <section id="home">
+      <Header />
+      <Info />
+    </section>
+  );
 }

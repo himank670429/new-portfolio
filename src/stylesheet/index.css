@@ -18,6 +18,13 @@
 
 body {
   background-color: var(--color-background);
+  width: 100dvw;
+  height: 100dvh;
+  box-sizing: border-box;
+}
+
+section {
+  @apply border-white text-text-primary;
 }
 
 .logo-block {
