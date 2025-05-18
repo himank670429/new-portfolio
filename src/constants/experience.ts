@@ -3,6 +3,7 @@ export type Experience = {
   companyName: string;
   duration: string;
   roles: ExperienceRole[];
+  logo: string;
 };
 
 export const EXPERIENCE: Experience[] = [
@@ -26,6 +27,7 @@ export const EXPERIENCE: Experience[] = [
         description: "Worked on foundational features.",
       },
     ],
+    logo: "/icons/org/axe_consultancy.jpg",
   },
   {
     companyName: "Dummy Company B",
@@ -37,5 +39,6 @@ export const EXPERIENCE: Experience[] = [
         description: "Developed user interfaces for various projects.",
       },
     ],
+    logo: "/icons/org/dac-dark.png",
   },
 ];
