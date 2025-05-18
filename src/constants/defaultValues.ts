@@ -1,5 +1,5 @@
 // default values for portfolio
-import { HOME, PROJECT } from "./keys";
+import { PROJECT, EXPERIENCE } from "./keys";
 
 export const splashScreenDuration = 3;
 
@@ -8,9 +8,9 @@ export type Nav = {
   link: string;
 };
 export const Navs: Nav[] = [
-  { label: "Home", link: HOME },
-  { label: "Exprience", link: "#" },
-  { label: "Projects", link: PROJECT },
+  { label: "Home", link: `#` },
+  { label: "Exprience", link: `#${EXPERIENCE}` },
+  { label: "Projects", link: `#${PROJECT}` },
   { label: "Contact", link: "#" },
 ];
 
