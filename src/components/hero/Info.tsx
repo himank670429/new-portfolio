@@ -9,7 +9,7 @@ export function Info() {
   }
 
   return (
-    <div className={styles.container}>
+    <div>
       <span className={styles.hightedText}>hi my name is</span>
       <h2 className={styles.nameText}>{MY_NAME},</h2>
       <p className={styles.descriptionText}>{MY_DESCRIPTION}</p>
@@ -21,7 +21,6 @@ export function Info() {
 }
 
 const styles = {
-  container: "font-mono ",
   hightedText: "text-text-highlight text-xl font-semibold",
   nameText: "text-[45px] text-text-primary",
   descriptionText: "text-text-secondary max-w-[560px]",

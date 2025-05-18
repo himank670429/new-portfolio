@@ -9,7 +9,7 @@ export function ProjectCard(props: ProjectCardProps) {
   const { icon, title, description, readMoreLink } = props;
 
   return (
-    <div className={styles.container}>
+    <article className={styles.container}>
       {/* header */}
       <div className={styles.header}>
         <img src={icon} alt={`${title} icon`} className={styles.image} />
@@ -23,7 +23,7 @@ export function ProjectCard(props: ProjectCardProps) {
       <a href={readMoreLink} className={styles.link}>
         Read More
       </a>
-    </div>
+    </article>
   );
 }
 

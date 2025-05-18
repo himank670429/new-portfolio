@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 import { projects } from "@/constants/projects";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { SectionHeading } from "@/components/common/SectionHeading";
-
+import { PROJECT } from "@/constants/keys";
 type Project = {
   icon: string;
   title: string;
@@ -12,7 +12,7 @@ type Project = {
 
 export function Projects() {
   return (
-    <section id="project">
+    <section id={PROJECT}>
       <SectionHeading title="Projects" />
       <div className={styles.projects}>
         {projects.map((project: Project) => (
