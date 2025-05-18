@@ -1,10 +1,11 @@
 import { Home, Projects } from "@/screens";
-import { SplashScreen } from "@/components";
+import { SplashScreen, Header } from "@/components";
 import ThemeProvider from "./contexts/ThemeContext";
 function App() {
   return (
     <ThemeProvider>
       <SplashScreen>
+        <Header />
         <Home />
         <Projects />
       </SplashScreen>

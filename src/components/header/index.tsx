@@ -17,7 +17,7 @@ export function Header() {
     );
   }
 
-  function renderHeaderIcon(item: HeaderIconType) {
+  function renderHeaderIconButton(item: HeaderIconType) {
     return (
       <a
         target="_blank"
@@ -39,17 +39,21 @@ export function Header() {
   };
 
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
+      {/* logo */}
       <a href="/" >
         <img alt="logo" className={styles.logo} src="/icons/logo/logo.svg" />
       </a>
 
-      <div className={styles.navs}>{Navs.map(renderNavLink)}</div>
+      {/* nav link */}
+      <nav className={styles.navs}>{Navs.map(renderNavLink)}</nav>
 
+      {/* header icons button */}
       <div className={styles.iconsWrapper}>
-        {headerIcons.map(renderHeaderIcon)}
+        {/* linkedin and github icon button */}
+        {headerIcons.map(renderHeaderIconButton)}
 
-        {/* toggle button */}
+        {/* theme toggle button */}
         <button className={styles.iconButton} onClick={handleThemeToggle}>
           <img
             className={styles.icon}
@@ -58,7 +62,7 @@ export function Header() {
           />
         </button>
       </div>
-    </div>
+    </header>
   );
 }
 
@@ -71,7 +75,7 @@ const styles = {
   navText: "font-mono text-text-primary",
 
   iconButton:
-    "size-10 bg-background-light flex items-center justify-center rounded-full",
+    "size-10 bg-background-light flex items-center justify-center cursor-pointer rounded-full",
   icon: "size-4",
   iconsWrapper: "flex gap-2 gap-4",
 };

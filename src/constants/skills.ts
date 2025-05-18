@@ -1,4 +1,4 @@
-type SkillType = {
+export type SkillType = {
   label: string;
   icon: NodeRequire | null;
 };
