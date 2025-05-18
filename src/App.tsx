@@ -1,15 +1,15 @@
-import { Home } from "@/screens";
-import { SplashScreen, ScreenLayout } from "@/components";
+import { Home, Projects } from "@/screens";
+import { SplashScreen, Header } from "@/components";
 import ThemeProvider from "./contexts/ThemeContext";
 function App() {
   return (
     <ThemeProvider>
-      <ScreenLayout>
-        <SplashScreen>
-          <Home />
-        </SplashScreen>
-      </ScreenLayout>
-     </ThemeProvider>
+      <SplashScreen>
+        <Header />
+        <Home />
+        <Projects />
+      </SplashScreen>
+    </ThemeProvider>
   );
 }
 

@@ -1,8 +1,9 @@
-import { Header, Info } from "@/components";
-
+import { Info } from "@/components";
+import { HOME } from "@/constants/keys";
 export function Home() {
-  return <div>
-    <Header />
-    <Info />
-  </div>;
+  return (
+    <section id={HOME}>
+      <Info />
+    </section>
+  );
 }

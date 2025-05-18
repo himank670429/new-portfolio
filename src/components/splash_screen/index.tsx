@@ -1,8 +1,9 @@
-import { AnimatedLoadingLogo } from "@/components";
-import { useState, useEffect, PropsWithChildren } from "react";
-import { splashScreenDuration } from "@/constants/defaultValues";
+import {AnimatedLoadingLogo} from "@/components";
+import {useState, useEffect, PropsWithChildren} from "react";
+import {splashScreenDuration} from "@/constants/defaultValues";
 
 export function SplashScreen(props: Readonly<PropsWithChildren>): JSX.Element {
+  const {children} = props;
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [isFadingOut, setIsFadingOut] = useState<boolean>(false);
 
@@ -22,26 +23,22 @@ export function SplashScreen(props: Readonly<PropsWithChildren>): JSX.Element {
   }, []);
 
   return (
-    <div className="relative size-full">
-      {/* Splash Screen with fade-out effect */}
-      {isLoading && (
+    <>
+      {isLoading ? (
         <div
-          className={`absolute inset-0 flex justify-center items-center bg-background transition-opacity duration-500 ${
+          className={`${styles.splashscreenContainer} ${
             isFadingOut ? "opacity-0" : "opacity-100"
           }`}
         >
           <AnimatedLoadingLogo />
         </div>
+      ) : (
+        children
       )}
-
-      {/* Children content with slide-up animation */}
-      <div
-        className={`container mx-auto transition-transform duration-500 ${
-          isLoading ? "translate-y-10 opacity-0" : "translate-y-0 opacity-100"
-        }`}
-      >
-        {props.children}
-      </div>
-    </div>
+    </>
   );
+}
+
+const styles = {
+  splashscreenContainer: "absolute inset-0 flex justify-center items-center bg-background transition-opacity duration-500"
 }

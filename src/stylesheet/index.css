@@ -16,13 +16,26 @@
   --color-text-highlight: #188168;
 }
 
+body {
+  background-color: var(--color-background);
+  @apply h-[100dvh] box-border flex justify-center;
+}
+
+#root{
+  @apply container h-fit text-white font-mono;
+}
+
+section {
+  @apply text-text-primary px-24 pt-40;
+
+  &:last-of-type {
+    @apply pb-40;
+  }
+}
+
 .logo-block {
-  width: 12px;
-  height: 24px;
-  border-radius: 2px;
-  background-color: #188168;
-  flex-shrink: 0;
   animation: logo-animation 1s linear infinite;
+  @apply h-6 w-3 rounded-xs bg-text-highlight shrink-0;
 }
 
 @keyframes logo-animation{
