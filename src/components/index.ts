@@ -4,3 +4,4 @@ export * from './splash_screen';
 export * from './hero';
 export * from './projects';
 export * from './experience';
+export * from '../screens/Contact';
