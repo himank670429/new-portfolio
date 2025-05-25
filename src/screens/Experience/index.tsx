@@ -10,7 +10,7 @@ export function Experience () {
   };
 
   return (
-    <section id={EXPERIENCE_KEY} className={styles.section}>
+    <section id={EXPERIENCE_KEY}>
       <SectionHeading title="Experience" />
       <div className={styles.container}>
         {EXPERIENCE.map(renderExperienceCards)}
@@ -20,6 +20,5 @@ export function Experience () {
 };
 
 const styles = {
-  section: 'py-12',
   container: 'mx-auto px-4',
 };
